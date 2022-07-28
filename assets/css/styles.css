@@ -1,0 +1,186 @@
+:root {
+    --white: #fff;
+    --platinum: #e8ebe4;
+    --gray: #bec1bb;
+    --dark-jungle: #1b1f21;
+    --outer-space: #444749;
+    --old-silver: #828485;
+    --blue-bell: #a491d2;
+    --soap: #cdc3e6;
+    --pale-lavender: #d4dcff;
+
+    /* Font sizes */
+    --large: 2.813rem; /* 45px */
+    --medium: 1rem; /* 16px */
+    --small: 0.875rem; /* 14px */
+    --x-small: 0.625rem; /* 10px */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--medium);
+    color: var(--dark-jungle);
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border-right: 1px solid var(--gray);
+    overflow-y: auto;
+}
+
+.active-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--platinum);
+}
+
+.active-user {
+    display: flex;
+    align-items: center;
+}
+
+.active-text p:last-child {
+    font-size: var(--x-small);
+    color: var(--gray);
+}
+
+.active-container .active-user div:last-child {
+    padding-left: 12px;
+}
+
+.active-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-icons i {
+    padding: 5px;
+    font-size: 1.3rem;
+    color: var(--old-silver);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 50px;
+    border-bottom: 2px solid var(--platinum);
+}
+
+.button-container button {
+    padding: 15px 40px;
+    background-color: var(--blue-bell);
+    border: none;
+    color: var(--white);
+    font-size: var(--medium);
+}
+
+.button-container button:hover {
+    background-color: var(--soap);
+    cursor: pointer;
+}
+
+.button-container button:focus {
+    background-color: var(--gray);
+}
+
+li.inactive-user {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--platinum);
+}
+
+.inactive-container .inactive-user div:last-child {
+    padding-left: 12px;
+}
+
+.inactive-container .inactive-user div:last-child p:last-child {
+    font-size: var(--small);
+    color: var(--outer-space);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    background-color: var(--platinum);
+}
+
+.networking-container {
+    max-width: 32rem;
+}
+
+.networking-container .networking-title {
+    font-size: var(--large);
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Agregué un delgado scrollbar para el sidebar de usuarios cuando éste se desborda en pantallas desktop pequeñas de 13-14 pulgadas. 
+En pantallas más grandes de 23-27 pulgadas se muestra todo el contenido, por lo que el scrollbar queda oculto. */
+.sidebar-container::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* El color del scrollbar concuerda con la paleta de colores del mockup dado */
+.sidebar-container::-webkit-scrollbar-thumb {
+    background-color: var(--pale-lavender);
+}
+
+/* Imágenes */
+.sidebar-container img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid var(--pale-lavender);
+}
+
+.active-user-img {
+    display: flex;
+    align-items: center;
+}
+
+.active-container img {
+    width: 2.2rem;
+}
+
+.inactive-user-img {
+    display: flex;
+    align-items: center;
+}
+
+.inactive-container img {
+    width: 3.2rem;
+}
+
+.content-container .large-logo img {
+    max-width: 16rem;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    margin-bottom: 1rem;
+}
